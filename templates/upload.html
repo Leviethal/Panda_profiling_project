@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload File for Profiling</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <h2>Upload a CSV or Excel File</h2>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="datafile" accept=".csv, .xls, .xlsx" required><br>
+        <input type="submit" value="Upload and Analyze">
+    </form>
+    <div id="status"></div>
+</body>
+</html>
